@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+@media (max-width: 576px) {
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .container > div {
+    max-width: 100%;
+  }
+
+  .alert.d-flex {
+    flex-wrap: wrap !important;
+    gap: 8px;
+    font-size: 16px !important;
+  }
+
+  .alert.d-flex span {
+    max-width: 100%;
+  }
+
+  textarea,
+  select,
+  button {
+    max-width: 100%;
+  }
+
+  p {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 17px;
+  }
+
+  .p-4 {
+    padding: 16px !important;
+  }
+}

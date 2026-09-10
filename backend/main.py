@@ -71,7 +71,7 @@ Email to process:
 """
 
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
             messages=[
                 {"role": "user", "content": prompt}
             ],
@@ -139,7 +139,7 @@ Generate ONLY the finalized message response body text. Do not include markdown 
 """
 
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
             messages=[
                 {"role": "user", "content": prompt}
             ],
