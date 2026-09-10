@@ -71,7 +71,7 @@ Email to process:
 """
 
         response = client.chat.completions.create(
-            model="openai/gpt-oss-120b",
+            model=os.getenv("GROQ_MODEL"),
             messages=[
                 {"role": "user", "content": prompt}
             ],
@@ -139,7 +139,7 @@ Generate ONLY the finalized message response body text. Do not include markdown 
 """
 
         response = client.chat.completions.create(
-            model="openai/gpt-oss-120b",
+            model=os.getenv("GROQ_MODEL"),
             messages=[
                 {"role": "user", "content": prompt}
             ],
