@@ -3,6 +3,8 @@ import "./App.css";
 import React, { useState } from "react";
 import axios from "axios";
 
+const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+
 function App() {
   const [email, setEmail] = useState("");
 
@@ -54,7 +56,7 @@ function App() {
     setShowToneBox(false);
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/analyze", {
+      const res = await axios.post(`${API_URL}/analyze`, {
         email: email,
         tone: tone,
       });
@@ -86,7 +88,7 @@ function App() {
   const generateReply = async () => {
     setGenerating(true);
     try {
-      const res = await axios.post("http://127.0.0.1:8000/generate", {
+      const res = await axios.post(`${API_URL}/generate`, {
         email: email,
         tone: tone,
       });
