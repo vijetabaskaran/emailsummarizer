@@ -29,7 +29,7 @@ app.add_middleware(
 # GROQ CLIENT SETUP
 # ==========================================
 client = Groq(
-    api_key=os.getenv("GROQ_KEY")
+    api_key=os.getenv("GROQ_API_KEY")
 )
 
 # ==========================================
